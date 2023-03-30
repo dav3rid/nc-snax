@@ -1,4 +1,4 @@
-const pool = require('../db/index');
+const pool = require('../db/connection');
 
 exports.fetchSnacks = () => {
   return pool.query('SELECT * FROM snacks').then(({ rows: snacks }) => {
@@ -12,7 +12,7 @@ exports.addSnack = (newSnack) => {
   if (!snack_name || !snack_description) {
     return Promise.reject({
       status: 400,
-      msg: 'you did a bad request not my problem',
+      msg: 'you did a bad request not my problem'
     });
   }
 
