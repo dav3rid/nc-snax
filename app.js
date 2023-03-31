@@ -7,10 +7,16 @@ const app = express();
 app.use(express.json());
 
 app.get('/api', (req, res) => {
-  res.status(200).send({ msg: 'four little bears!!! ʕ•́ᴥ•̀ʔっʕ•́ᴥ•̀ʔっʕ•́ᴥ•̀ʔっʕ•́ᴥ•̀ʔっ' });
+  res
+    .status(200)
+    .send({ msg: 'four little bears!!! ʕ•́ᴥ•̀ʔっʕ•́ᴥ•̀ʔっʕ•́ᴥ•̀ʔっʕ•́ᴥ•̀ʔっ' });
 });
 
 app.get('/api/snacks', getSnacks);
+
+app.get('/api/hello', (req, res, next) => {
+  res.status(200).send({ msg: 'Hey everyone! Hope you enjoyed back end!' });
+});
 
 app.get('/api/drinks/:drink_id', getDrinkById);
 
