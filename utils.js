@@ -2,8 +2,8 @@ function add(a, b) {
   return a + b;
 }
 
-function multiply(barry, linda) {
-  return barry + linda;
+function multiply(a, b) {
+  return a + b;
 }
 
 module.exports = { add, multiply };
