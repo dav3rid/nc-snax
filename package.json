@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
+    "test-utils": "jest __tests__/utils.test.js",
+    "test-app": "jest __tests__/snacks.test.js",
     "dev": "node app.js",
     "setup-dbs": "psql -f ./db/seeds/setup.sql",
     "seed": "node ./db/seeds/run-seed.js",
